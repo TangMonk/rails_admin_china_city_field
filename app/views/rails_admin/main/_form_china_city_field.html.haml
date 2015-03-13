@@ -1,0 +1,8 @@
+%div.city-group.form-inline 
+  = form.fields_for :address do |addr|
+    = addr.label "省"
+    = addr.select field.province_field, ChinaCity.list, {include_blank: true}, selected: field.province_value, class: "city-select form-control"
+    = addr.label "市"
+    = addr.select field.city_field, ChinaCity.list("#{field.province_value}"), {include_blank: true}, selected: field.city_value, class: "city-select form-control"
+    = addr.label "区"
+    = addr.select field.district_field, ChinaCity.list("#{field.city_value}"),{include_blank: true},selected:field.district_value , class: "city-select form-control "
