@@ -1,6 +1,6 @@
 # ChinaCity for RailsAdmin 省市区级联选择
 
-![](https://camo.githubusercontent.com/2e8de87ab123d27416eecc372e19a19d4dadf18b/687474703a2f2f636c2e6c792f696d6167652f3363323132693165336231542f53637265656e466c6f772e6d70342e676966)
+![](http://i.imgur.com/VpO5dxu.gif)
 
 # 依赖
 
