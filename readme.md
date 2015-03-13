@@ -20,6 +20,7 @@
 ```ruby
 class Businessman
     embeds_one :address, class_name: "Address", as: :addressable # or has_one is ok.
+    accepts_nested_attributes_for :address
     
     rails_admin do
         field :address, :china_city
