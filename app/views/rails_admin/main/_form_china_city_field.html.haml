@@ -6,3 +6,18 @@
     = addr.select field.city_field, ChinaCity.list("#{field.province_value}"), {include_blank: true}, selected: field.city_value, class: "city-select form-control"
     = addr.label "区"
     = addr.select field.district_field, ChinaCity.list("#{field.city_value}"),{include_blank: true},selected:field.district_value , class: "city-select form-control "
+
+:coffee
+  (($) ->
+    $.fn.china_city = () ->
+      @each ->
+        selects = $(@).find('.city-select')
+        selects.change ->
+          $this = $(@)
+          next_selects = selects.slice(selects.index(@) + 1) # empty all children city
+          $("option:gt(0)", next_selects).remove()
+          if next_selects.first()[0] and $this.val() # init next child
+            $.get "/china_city/\#{$(@).val()}", (data) ->
+              next_selects.first()[0].options.add(new Option(option[0], option[1])) for option in data
+    $(document).on 'rails_admin.dom_ready', -> $('.city-group').china_city()
+  )(jQuery)
