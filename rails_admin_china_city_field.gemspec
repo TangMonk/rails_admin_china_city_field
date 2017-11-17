@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = RailsAdminChinaCityField::VERSION
   s.authors     = ["tangmonk"]
   s.email       = ["wytwyt02@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RailsAdminChinaCityField."
-  s.description = "TODO: Description of RailsAdminChinaCityField."
+  s.homepage    = ""
+  s.summary     = "Summary of RailsAdminChinaCityField."
+  s.description = "Description of RailsAdminChinaCityField."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
